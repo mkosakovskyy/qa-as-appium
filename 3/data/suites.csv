@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Thu Nov 10 13:07:17 GMT 2022","Thu Nov 10 13:08:24 GMT 2022","67088","Test_Suite_Emulator_Pixel_4","Tests_on_Emulator_Pixel_4","com.appium.runners.TestNGRunner_Pixel3","com.appium.runners.TestNGRunner_Pixel3","scenario","Runs Cucumber Scenarios",""
+"failed","Thu Nov 10 13:05:25 GMT 2022","Thu Nov 10 13:06:36 GMT 2022","71025","Test_Suite_Emulator_Pixel_4","Tests_on_Emulator_Pixel_4","com.appium.runners.TestNGRunner_Pixel3","com.appium.runners.TestNGRunner_Pixel3","scenario","Runs Cucumber Scenarios",""
+"broken","Thu Nov 10 13:06:36 GMT 2022","Thu Nov 10 13:07:17 GMT 2022","40886","Test_Suite_Emulator_Pixel_4","Tests_on_Emulator_Pixel_4","com.appium.runners.TestNGRunner_Pixel3","com.appium.runners.TestNGRunner_Pixel3","scenario","Runs Cucumber Scenarios",""
