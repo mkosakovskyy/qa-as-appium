@@ -42,8 +42,8 @@ public class ArticleStepDef {
 
     }*/
 
-    @Step("El usuario accede al articulo")
-    @When("El usuario accede al articulo {string}")
+    @Step("El usuario esta en el articulo")
+    @Given("El usuario esta en el articulo {string}")
     public void elUsuarioAccedeAlArticulo(String url) {
         mainPage.openAppFirstTime();
         mainPage.goToURL(url);
@@ -65,11 +65,15 @@ public class ArticleStepDef {
     }
 
     @And("Aparece el elemento publicitario MPU1 con su tamaño correspondiente")
-    public void apareceElElementoPublicitarioMPU1() {
+    public void apareceElElementoPublicitarioMPU1() throws InterruptedException {
+        basePage.swipe(1030,1315,1040,350,2000,1);
+        Assert.assertTrue(articlePage.geMpuAdContainer().isDisplayed());
     }
 
     @And("Aparece el elemento publicitario MPU2 con su tamaño correspondiente")
-    public void apareceElElementoPublicitarioMPU2() {
+    public void apareceElElementoPublicitarioMPU2() throws InterruptedException {
+        basePage.swipe(1030,1315,1040,350,2000,1);
+        Assert.assertTrue(mainPage.getMPUAdContainer().isDisplayed());
     }
 
     @And("Aparece el elemento publicitario MPU3 con su tamaño correspondiente")
