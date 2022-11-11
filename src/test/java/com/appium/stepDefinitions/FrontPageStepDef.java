@@ -19,10 +19,7 @@ public class FrontPageStepDef {
     BottomMenuPage bottomMenuPage = new BottomMenuPage();
     BasePage basePage = new BasePage();
 
-    @Before("@first")
-    public void openAppFirstTime() {
-        mainPage.openAppFirstTime();
-    }
+
 
     @Step("The user access the front page")
     @Given("The user access the front page")

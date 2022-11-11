@@ -42,7 +42,7 @@ public class BasePage {
 
     public BasePage() {
         this.driver = new DriverManager().getDriver();
-        this.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         PageFactory.initElements(new AppiumFieldDecorator(this.driver), this);
     }
 
@@ -59,12 +59,6 @@ public class BasePage {
         } catch (WebDriverException | IOException somePlatformsDontSupportScreenshots) {
             System.err.println(somePlatformsDontSupportScreenshots.getMessage());
         }
-    }
-
-    public void scroll(int x,int y,int endx,int endy) throws InterruptedException {
-        //TouchAction action = new TouchAction(driver);
-        //swipe(1000, 1300, 1010, 40, 2000);
-        //ction.press(PointOption.point(x, y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1))).moveTo(PointOption.point(endx, endy)).release().perform();
     }
 
     public void tapCancelAdWaitForElement(MobileElement elementCheck, int x, int y) {
@@ -305,7 +299,7 @@ public class BasePage {
     }
 
     public void swipe(int startX, int startY, int endX, int endY, int millis,int timesScroll) throws InterruptedException {
-        for (int i = 0; i < timesScroll; i++) {
+        for (int i = 0; i <= timesScroll; i++) {
             new TouchAction(driver).press(PointOption.point(startX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(endX, endY)).release().perform();
         }
     }

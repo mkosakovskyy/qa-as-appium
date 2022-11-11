@@ -61,7 +61,7 @@ public class MainPage extends BasePage {
         return skipTutorialButton;
     }
 
-    public void clickAcceptButton(){
+    public void clickAcceptButton() {
         acceptButton.click();
     }
 
@@ -86,16 +86,12 @@ public class MainPage extends BasePage {
         return mpuAdContainer;
     }
 
-    public void openAppFirstTime(){
-        try {
-            clickAcceptButton();
-            waitForVisibility(getAcceptCookiesButton());
-            clickAcceptCookiesButton();
-            waitForVisibility(getSkipTutorialButton());
-            clickSkipTutorialButton();
-        } catch (NoSuchElementException | TimeoutException | StaleElementReferenceException e) {
-            System.out.println("App already opened");
-        }
+    public void openAppFirstTime() {
+        clickAcceptButton();
+        waitForVisibility(getAcceptCookiesButton());
+        clickAcceptCookiesButton();
+        waitForVisibility(getSkipTutorialButton());
+        clickSkipTutorialButton();
     }
 
 

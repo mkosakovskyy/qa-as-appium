@@ -8,7 +8,7 @@ public class ArticlePage extends BasePage {
     @AndroidFindBy(id = "es.mmip.prisacom.as:id/ads_container_detail")
     private MobileElement stickyAdContainer;
 
-    @AndroidFindBy(id = "es.mmip.prisacom.as:id/ads__robapaginas")
+    @AndroidFindBy(id = "es.mmip.prisacom.as:id/ad-container")
     private MobileElement mpuAdContainer;
 
     @AndroidFindBy(id = "Saber más")

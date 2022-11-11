@@ -1,16 +1,10 @@
 @frontpage-feature
 Feature: Front page scenarios
 
-  Background: The user is in the front page
-    Given The user access the front page
-
-  @first
-  @inter
-  Scenario: The inter add is displayed (Front page)
-    Then The inter add is displayed
-
-  Scenario: The sticky add is displayed (Front page)
-    Then The sticky add is displayed
-
-  Scenario: The MPU1 add is displayed (Front page)
-    Then The first MPU add is displayed
+  Scenario: Carga de Contenido publicitarios Portada
+    When El usuario accede a la portada de la aplicacion
+    Then Aparece el elemento publicitario INTER con tamaño 1:1
+    When El usuario cierra el elemento publicitario INTER
+    Then La portada carga por completo
+    And Aparece el elemento publicitario MLDB1
+    And Aparece el elemento publicitario MPU1 con su tamaño correspondiente

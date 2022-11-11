@@ -1,19 +1,16 @@
 @article-feature
 Feature: Article scenarios
 
-  Background: The user is in the article
-    Given The user access the article
+  Scenario Outline: Carga de Contenido publicitarios Articulo
+    When El usuario accede al articulo "<urlarticulo>"
+    And  La aplicacion carga por completo
+    Then Aparece el elemento publicitario INTEXT con tamaño 1:1
+    And Aparece el elemento publicitario MLDB1
+    And Aparece el elemento publicitario MPU1 con su tamaño correspondiente
+    And Aparece el elemento publicitario MPU2 con su tamaño correspondiente
+    And Aparece el elemento publicitario MPU3 con su tamaño correspondiente
+    And Aparece el elemento publicitario BTN con su tamaño correspondiente
 
-  @first
-  @firstarticle
-  Scenario: The sticky add is displayed (Article)
-    Then The sticky add is displayed in the article
-
-  Scenario: The MPU1 add is displayed (Article)
-    Then The first MPU add is displayed
-
-  Scenario: The BTN add is displayed (Article)
-    Then The BTN add is displayed
-
-  Scenario: The MPU2 add is displayed (Article)
-    Then The second MPU add is displayed
+    Examples:
+      | urlarticulo                                                       |
+      | https://argentina.as.com/futbol/la-argentina-de-messi-se-rompe-n/ |

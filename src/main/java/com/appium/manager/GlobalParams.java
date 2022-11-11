@@ -69,14 +69,6 @@ public class GlobalParams {
 
 	public void initializeGlobalParams() {
 		GlobalParams params = new GlobalParams();
-
-		/*
-		 * System.getProperty("platformName", "iOS") Setting default value for
-		 * platformName as Android
-		 * 
-		 * This is done for running the test execution from Runner class instead of
-		 * Maven command.
-		 */
 		
 		/**
 		iPhone 12 -> 7021E632-B569-4371-A010-97EDA4564DAD
