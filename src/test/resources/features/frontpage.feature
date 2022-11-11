@@ -1,10 +1,11 @@
-@frontpage-feature
-Feature: Front page scenarios
+@AS @Digital
+Feature: Digital (Movilidad)
 
-  Scenario: Carga de Contenido publicitarios Portada
+  @Publicidad
+  Scenario: AUT-3:CP01 - Carga de Contenido publicitarios Portada
     When El usuario accede a la portada de la aplicacion
     Then Aparece el elemento publicitario INTER con tamaño 1:1
     When El usuario cierra el elemento publicitario INTER
     Then La portada carga por completo
-    And Aparece el elemento publicitario MLDB1
-    And Aparece el elemento publicitario MPU1 con su tamaño correspondiente
+    And Aparece el elemento publicitario MLDB1 (Articulo)
+    And Aparece el elemento publicitario MPU1 con su tamaño correspondiente (Articulo)

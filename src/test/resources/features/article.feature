@@ -1,7 +1,8 @@
-@article-feature
-Feature: Article scenarios
+@AS @Digital
+Feature: Digital (Movilidad)
 
-  Scenario Outline: Carga de Contenido publicitarios Articulo
+  @Publicidad
+  Scenario Outline: AUT-4:CP02 - Carga de Contenido publicitarios Articulo
     When El usuario accede al articulo "<urlarticulo>"
     And  La aplicacion carga por completo
     Then Aparece el elemento publicitario INTEXT con tamaño 1:1
